@@ -1,0 +1,126 @@
+@import "reset.scss";
+@font-face {
+    font-family: 'Museo';
+    src: url('/css/MuseoSansCyrl.otf');
+   }
+
+
+$orange:#E69A37;
+$grey:#323232;
+$light-grey: #F3F3F3;
+$black: #000;
+
+.container {
+    margin: auto;
+    width: 1440px;
+}
+
+.content {
+    width: 100%;
+}
+
+.header-welcome{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding: 12px 0;
+}
+
+.welcome-content {
+    max-width: 935px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome-logo{
+    display: flex;
+    .welcome-logo__img {
+        height: 56px;
+        padding-right: 10px;
+    }
+    .welcome-words {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .logo__word {
+            font-family: 'Ubuntu', sans-serif;
+            color: $black;
+            font-size: 21px;
+            padding-bottom: 3px;
+        }
+        .logo__discription{
+            font-family: 'Arial', sans-serif;
+            color: $grey;
+            font-size: 13px;
+            letter-spacing: 0.2px;
+        }
+    }        
+}
+
+.welcome-search {
+    display: flex;
+    align-items: center;
+}
+.input{
+    display:inline-block;  
+    position:relative;
+}
+
+.form {
+    display: flex;
+    flex-wrap: nowrap;
+    position:relative;
+    input{
+        border: none;
+        background-color: $light-grey;
+        position: relative;
+        width: 440px;
+        height: 40px;
+        font-size: 13px;
+        &::placeholder {
+            font-size: 13px;
+            padding-left: 12px;
+            font-family: 'Museo';
+        }
+    }  
+    button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: no-repeat center/57% url('/img/Union.svg');
+        padding: 0;
+        position: absolute;
+        right: 6px;
+    }    
+}
+
+@media screen and (max-width: 1399px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .container {
+        width: 992px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        width: 768px;
+    } 
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 576px;
+    }   
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}
