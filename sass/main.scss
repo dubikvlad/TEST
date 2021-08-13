@@ -95,6 +95,41 @@ $black: #000;
     }    
 }
 
+.header-nav {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+}
+
+.nav-items {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    .nav__item {
+        a {
+            display: block;            
+            font-family: 'Museo';
+            color: $black;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 15.5px 17.5px;
+            border-left: 1px solid #fff;
+            &:hover {
+                background-color: $orange;
+                color: #fff;
+            }
+        }            
+    }
+    
+    .active {
+        background-color: $grey;
+        a{
+            color: #fff !important;
+        }    
+    }
+}
+
 @media screen and (max-width: 1399px) {
     .container {
         width: 1200px;

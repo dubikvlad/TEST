@@ -369,7 +369,7 @@ textarea {
 }
 
 a {
-  outline: none;
+  outline: none !important;
   text-decoration: none;
   color: #000;
 }
@@ -462,6 +462,38 @@ a {
   padding: 0;
   position: absolute;
   right: 6px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-items {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-items .nav__item a {
+  display: block;
+  font-family: "Museo";
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15.5px 17.5px;
+  border-left: 1px solid #fff;
+}
+.nav-items .nav__item a:hover {
+  background-color: #E69A37;
+  color: #fff;
+}
+.nav-items .active {
+  background-color: #323232;
+}
+.nav-items .active a {
+  color: #fff !important;
 }
 
 @media screen and (max-width: 1399px) {
