@@ -480,9 +480,9 @@ a {
   display: block;
   font-family: "Museo";
   color: #000;
-  font-size: 15px;
+  font-size: 15.5px;
   font-weight: 700;
-  padding: 15.5px 17.5px;
+  padding: 16px 16px;
   border-left: 1px solid #fff;
 }
 .nav-items .nav__item a:hover {
