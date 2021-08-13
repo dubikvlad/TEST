@@ -17,6 +17,7 @@ $black: #000;
 .container {
     margin: auto;
     width: 1440px;
+    max-width: 100%;
 }
 
 .content {
@@ -75,6 +76,8 @@ $black: #000;
     position:relative;
 }
 
+
+
 .form {
     display: flex;
     flex-wrap: nowrap;
@@ -83,12 +86,12 @@ $black: #000;
         border: none;
         background-color: $light-grey;
         position: relative;
-        width: 440px;
+        width: 428px;
         height: 40px;
+        padding-left: 12px;
         font-size: 13px;
         &::placeholder {
             font-size: 13px;
-            padding-left: 12px;
             font-family: 'Museo';
         }
     }  
@@ -265,14 +268,15 @@ $black: #000;
     width: 100%;
     .category{
         height: 77px;
-        width: 20%;        
+        width: 20%;  
         a {
+            box-sizing: border-box;  
             height: 100%;
             width: 100%;
             display: block;
             display: flex;
             align-items: center;
-            padding: 0 21px;
+            padding: 0 0 0 21px;   
             font-family: 'Museo';
             font-size: 11px;
             line-height: 16px;
@@ -291,19 +295,19 @@ $black: #000;
 
 @media screen and (max-width: 1399px) {
     .container {
-        width: 1200px;
+        width: 1199px;
     }
 }
 
 @media screen and (max-width: 1199px) {
     .container {
-        width: 992px;
+        width: 991px;
     }
 }
 
 @media screen and (max-width: 991px) {
     .container {
-        width: 768px;
+        width: 767px;
     } 
 
     .slider__text {
@@ -333,11 +337,27 @@ $black: #000;
         left: 40px;
         width: auto;
         padding-right: 10px;
+        max-width: 508px;
     }
 
     .text2 {
         font-size: 1.5em;
         line-height: 30px;
+    }
+
+    .categories {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .category {
+            min-width: 157px; 
+            a {
+                padding: 0 0 0 15px;
+                span{
+                    word-wrap: break-word;
+                }
+                
+            }
+        }
     }
     
 }
