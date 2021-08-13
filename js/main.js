@@ -18,3 +18,13 @@ function removeActive() {
         el.classList.remove('active');
     }    
 }
+
+// bxslider
+$(document).ready(function(){
+    $('.bxslider').bxSlider({
+        touchEnabled: true,
+        pager: true,
+        nextText:'',
+        prevText:''
+    });
+});

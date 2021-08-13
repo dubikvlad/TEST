@@ -3,6 +3,10 @@
     font-family: 'Museo';
     src: url('/css/MuseoSansCyrl.otf');
    }
+   @font-face {
+    font-family: 'Museo Bold';
+    src: url('/css/MuseoSansCyrl_600.otf');
+   }
 
 
 $orange:#E69A37;
@@ -19,10 +23,14 @@ $black: #000;
     width: 100%;
 }
 
-.header-welcome{
+.wrapper {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.header-welcome{
+
     padding: 12px 0;
 }
 
@@ -106,6 +114,7 @@ $black: #000;
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     .nav__item {
         a {
             display: block;            
@@ -113,7 +122,7 @@ $black: #000;
             color: $black;
             font-size: 15.5px;
             font-weight: 700;
-            padding: 16px 16px;
+            padding: 16.5px 16px;
             border-left: 1px solid #fff;
             &:hover {
                 background-color: $orange;
@@ -127,6 +136,156 @@ $black: #000;
         a{
             color: #fff !important;
         }    
+    }
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: $orange;
+}
+
+.bx-wrapper{
+    border: none;
+    width: 100%;
+    position: relative;
+    box-shadow: none;
+    margin-bottom: 0;
+
+    .bx-viewport {
+        height: 536px !important;
+    }
+
+    .bxslider {
+        height: 100%;
+        div {
+            height: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .bx-clone > img {
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    	-webkit-box-shadow: inset 0px 0px 85px rgba(0,0,0,0.4);
+        -moz-box-shadow:    inset 0px 0px 85px rgba(0,0,0,0.4);
+	    box-shadow:         inset 0px 0px 85px rgba(0,0,0,0.4);  
+        &:after {
+            -webkit-box-shadow: inset 0px 0px 85px rgba(0,0,0,0.4);
+            -moz-box-shadow:    inset 0px 0px 85px rgba(0,0,0,0.4);
+	        box-shadow:         inset 0px 0px 85px rgba(0,0,0,0.4);
+
+	        position: absolute;
+	        top: 0; left: 0; bottom: 0; right: 0;
+	        content: "";
+        }  
+    }
+
+    .bx-prev,.bx-next {display: none;}
+
+    .bx-pager.bx-default-pager{
+        position: absolute;
+        bottom: 31px;
+        color: rgba(255, 255, 255, 0.1);
+        a {
+            height: 8px;
+            width: 8px;
+            border-radius: 0px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #FFFFFF;
+            
+            &:focus {
+                background: $orange;
+                border: 1px solid $orange !important;
+            }
+            &:hover {
+                background: #fff;
+                border: 1px solid #fff !important;
+            }
+        }
+        .active {
+            background: $orange;
+            border: 1px solid $orange !important;
+        }        
+    }
+}
+
+
+.slider__text {
+    position: absolute;
+    top: 104px;
+    left: 251px;
+    width: 550px;
+}
+
+.bg-orange {
+    background-color: $orange;
+}
+
+.text1 {
+    padding: 10px 17px;
+    display: inline-block;
+    font-family: 'Museo';
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.27em;
+}
+
+.text2 {
+    display: block;
+    font-family: 'Museo Bold';
+    font-weight: 600;
+    font-size: 50px;
+    margin-top: 19px;
+    line-height: 53.8px;
+}
+
+.text3 {
+    display: block;
+    font-family: 'Museo';
+    font-size: 17px;
+    line-height: 22px;
+    margin-top: 19px;
+    letter-spacing: 0.03em;
+}
+
+.white-text {
+    color: white;
+}
+
+.categories {
+    display: flex;
+    max-width: 935px;
+    width: 100%;
+    .category{
+        height: 77px;
+        width: 20%;        
+        a {
+            height: 100%;
+            width: 100%;
+            display: block;
+            display: flex;
+            align-items: center;
+            padding: 0 21px;
+            font-family: 'Museo';
+            font-size: 11px;
+            line-height: 16px;
+            img {
+                height: 40px;
+                padding-right: 5px;
+            }
+
+        }
+        &:hover {
+            background-color: $light-grey;
+            text-decoration: underline;
+        }
     }
 }
 
@@ -146,16 +305,64 @@ $black: #000;
     .container {
         width: 768px;
     } 
+
+    .slider__text {
+        position: absolute;
+        top: 104px;
+        left: 120px;
+        width: 550px;
+    }
 }
 
 @media screen and (max-width: 767px) {
     .container {
         width: 576px;
-    }   
+    } 
+
+    
+    .welcome-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .slider__text {
+        position: absolute;
+        top: 104px;
+        left: 40px;
+        width: auto;
+        padding-right: 10px;
+    }
+
+    .text2 {
+        font-size: 1.5em;
+        line-height: 30px;
+    }
+    
 }
 
 @media screen and (max-width: 576px) {
     .container {
         width: 100%;
+    }  
+    
+    .welcome-logo {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome-search {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .form {
+        width: 80%;
+        input {
+            width: 100%;
+        }
     }
 }
